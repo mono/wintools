@@ -1,0 +1,46 @@
+!if !defined (TARGET)
+TARGET=.\bin
+!else
+TARGET=.\bin\$(TARGET)
+!endif
+
+MCS=csc
+MCSFLAGS=-nologo
+
+!if !defined(RELEASE)
+MCSFLAGS=$(MCSFLAGS) -optimize+ -d:TRACE
+!else
+MCSFLAGS=$(MCSFLAGS) -debug+ -d:TRACE,DEBUG
+!endif
+
+VSPRJ2MAKE_DLL=$(TARGET)\vsprj2make.dll
+VSPRJ2MAKE_PDB=$(TARGET)\vsprj2make.pdb
+VSPRJ2MAKE_SRC=AssemblyInfo.cs \
+	Connect.cs \
+	CreateZipHelper.cs \
+	OptionsDlg.cs \
+	Prj2MakeHelper.cs \
+	RegistryHelper.cs \
+	MonoLaunchHelper.cs
+VSPRJ2MAKE_RES=-resource:OptionsDlg.resx,vsprj2make.OptionsDlg.resx
+
+$(VSPRJ2MAKE_DLL): $(VSPRJ2MAKE_SRC) 
+	-md $(TARGET)
+	$(MCS) $(MCSFLAGS) -r:System.dll -r:System.Data.dll -r:System.Xml.dll \
+-r:Office.dll -r:"C:\MSVS2003\Common7\IDE\PublicAssemblies\Extensibility.dll" \
+-r:EnvDTE.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll -target:library -out:$(VSPRJ2MAKE_DLL) \
+$(VSPRJ2MAKE_RES) $(VSPRJ2MAKE_SRC)
+	regasm .\bin\vsprj2make.dll /codebase /regfile
+
+# common targets
+
+all:	$(VSPRJ2MAKE_DLL)
+
+clean:
+	-del "$(VSPRJ2MAKE_DLL)" 2> nul
+	-del "$(VSPRJ2MAKE_PDB)" 2> nul
+
+
+# project names as targets
+
+vsprj2make: $(VSPRJ2MAKE_DLL)

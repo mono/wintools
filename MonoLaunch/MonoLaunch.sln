@@ -1,0 +1,37 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MonoCtrl2", "MonoCtrl2\MonoCtrl2.vcproj", "{A7552ECF-2523-43AB-8904-04B172E397BE}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "monoLaunchC", "monoLaunchC\monoLaunchC.vcproj", "{B5BFF071-21CE-4601-AD4E-9B204B2FE5BB}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "monoLaunchW", "monoLaunchW\monoLaunchW.vcproj", "{C8338AAD-CD54-47A8-A031-2E83A22CAB83}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{A7552ECF-2523-43AB-8904-04B172E397BE}.Debug.ActiveCfg = Debug|Win32
+		{A7552ECF-2523-43AB-8904-04B172E397BE}.Debug.Build.0 = Debug|Win32
+		{A7552ECF-2523-43AB-8904-04B172E397BE}.Release.ActiveCfg = Release|Win32
+		{A7552ECF-2523-43AB-8904-04B172E397BE}.Release.Build.0 = Release|Win32
+		{B5BFF071-21CE-4601-AD4E-9B204B2FE5BB}.Debug.ActiveCfg = Debug|Win32
+		{B5BFF071-21CE-4601-AD4E-9B204B2FE5BB}.Debug.Build.0 = Debug|Win32
+		{B5BFF071-21CE-4601-AD4E-9B204B2FE5BB}.Release.ActiveCfg = Release|Win32
+		{B5BFF071-21CE-4601-AD4E-9B204B2FE5BB}.Release.Build.0 = Release|Win32
+		{C8338AAD-CD54-47A8-A031-2E83A22CAB83}.Debug.ActiveCfg = Debug|Win32
+		{C8338AAD-CD54-47A8-A031-2E83A22CAB83}.Debug.Build.0 = Debug|Win32
+		{C8338AAD-CD54-47A8-A031-2E83A22CAB83}.Release.ActiveCfg = Release|Win32
+		{C8338AAD-CD54-47A8-A031-2E83A22CAB83}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
