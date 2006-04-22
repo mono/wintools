@@ -103,8 +103,6 @@ namespace Mfconsulting.Vsprj2make
 			Command command2 = null;
 			// Import MonoDevelop Solutions
 			Command command3 = null;
-			// Mono runtime
-			Command command4 = null;
 			// Test in Mono
 			Command command5 = null;
 			// vsprj2make Options
@@ -233,30 +231,6 @@ namespace Mfconsulting.Vsprj2make
 				Trace.WriteLine(String.Format("Error during OnConnect of Add-in:\n {0}", exc.Message));
 			}
 
-			// Add the Mono Runtime command -- command4
-			command4 = CreateNamedCommand(
-				addInInstance,
-				commands,
-				"MonoRuntime",
-				"&Mono Runtime", 
-				"Selects the default mono runtime",
-				ref contextGUIDS
-				);
-			
-			if(command4 == null)
-			{
-				command4 = GetExistingNamedCommand(commands, "vsprj2make.Connect.MonoRuntime");
-			}
-
-			try
-			{
-				command4.AddControl(popMenu.CommandBar, 5);
-			}
-			catch(System.Exception exc)
-			{
-				Trace.WriteLine(String.Format("Error during OnConnect of Add-in:\n {0}", exc.Message));
-			}
-
 			// Add the Test in Mono command -- command5
 			command5 = CreateNamedCommand(
 				addInInstance,
@@ -274,7 +248,7 @@ namespace Mfconsulting.Vsprj2make
 
 			try
 			{
-				command5.AddControl(popMenu.CommandBar, 6);
+				command5.AddControl(popMenu.CommandBar, 5);
 			}
 			catch(System.Exception exc)
 			{
@@ -298,7 +272,7 @@ namespace Mfconsulting.Vsprj2make
 
 			try
 			{
-				command6.AddControl(popMenu.CommandBar, 7);
+				command6.AddControl(popMenu.CommandBar, 6);
 			}
 			catch(System.Exception exc)
 			{

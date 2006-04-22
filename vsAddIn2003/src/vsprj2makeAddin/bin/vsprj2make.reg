@@ -15,13 +15,13 @@ REGEDIT4
 "Class"="Mfconsulting.Vsprj2make.Connect"
 "Assembly"="vsprj2make, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f036f9099e9b631"
 "RuntimeVersion"="v1.1.4322"
-"CodeBase"="file:///D:/MonoWin32/vsAddIn/src/vsprj2makeAddin/bin/vsprj2make.DLL"
+"CodeBase"="file:///K:/cygwin/download/mono-svn/trunk/wintools/vsAddIn2003/src/vsprj2makeAddin/bin/vsprj2make.DLL"
 
 [HKEY_CLASSES_ROOT\CLSID\{1B888614-0203-48F9-BA4C-BFE1ED9DC13D}\InprocServer32\1.0.0.0]
 "Class"="Mfconsulting.Vsprj2make.Connect"
 "Assembly"="vsprj2make, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f036f9099e9b631"
 "RuntimeVersion"="v1.1.4322"
-"CodeBase"="file:///D:/MonoWin32/vsAddIn/src/vsprj2makeAddin/bin/vsprj2make.DLL"
+"CodeBase"="file:///K:/cygwin/download/mono-svn/trunk/wintools/vsAddIn2003/src/vsprj2makeAddin/bin/vsprj2make.DLL"
 
 [HKEY_CLASSES_ROOT\CLSID\{1B888614-0203-48F9-BA4C-BFE1ED9DC13D}\ProgId]
 @="vsprj2make.Connect"
@@ -43,13 +43,13 @@ REGEDIT4
 "Class"="Mfconsulting.Vsprj2make.CreateZipHelper"
 "Assembly"="vsprj2make, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f036f9099e9b631"
 "RuntimeVersion"="v1.1.4322"
-"CodeBase"="file:///D:/MonoWin32/vsAddIn/src/vsprj2makeAddin/bin/vsprj2make.DLL"
+"CodeBase"="file:///K:/cygwin/download/mono-svn/trunk/wintools/vsAddIn2003/src/vsprj2makeAddin/bin/vsprj2make.DLL"
 
 [HKEY_CLASSES_ROOT\CLSID\{8EC5F7FD-48B6-32C2-B0C5-927BB1AFD381}\InprocServer32\1.0.0.0]
 "Class"="Mfconsulting.Vsprj2make.CreateZipHelper"
 "Assembly"="vsprj2make, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f036f9099e9b631"
 "RuntimeVersion"="v1.1.4322"
-"CodeBase"="file:///D:/MonoWin32/vsAddIn/src/vsprj2makeAddin/bin/vsprj2make.DLL"
+"CodeBase"="file:///K:/cygwin/download/mono-svn/trunk/wintools/vsAddIn2003/src/vsprj2makeAddin/bin/vsprj2make.DLL"
 
 [HKEY_CLASSES_ROOT\CLSID\{8EC5F7FD-48B6-32C2-B0C5-927BB1AFD381}\ProgId]
 @="Mfconsulting.Vsprj2make.CreateZipHelper"
@@ -71,13 +71,13 @@ REGEDIT4
 "Class"="Mfconsulting.Vsprj2make.OptionsDlg"
 "Assembly"="vsprj2make, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f036f9099e9b631"
 "RuntimeVersion"="v1.1.4322"
-"CodeBase"="file:///D:/MonoWin32/vsAddIn/src/vsprj2makeAddin/bin/vsprj2make.DLL"
+"CodeBase"="file:///K:/cygwin/download/mono-svn/trunk/wintools/vsAddIn2003/src/vsprj2makeAddin/bin/vsprj2make.DLL"
 
 [HKEY_CLASSES_ROOT\CLSID\{F1B65282-8908-38B9-9B9B-C2474BAB4541}\InprocServer32\1.0.0.0]
 "Class"="Mfconsulting.Vsprj2make.OptionsDlg"
 "Assembly"="vsprj2make, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f036f9099e9b631"
 "RuntimeVersion"="v1.1.4322"
-"CodeBase"="file:///D:/MonoWin32/vsAddIn/src/vsprj2makeAddin/bin/vsprj2make.DLL"
+"CodeBase"="file:///K:/cygwin/download/mono-svn/trunk/wintools/vsAddIn2003/src/vsprj2makeAddin/bin/vsprj2make.DLL"
 
 [HKEY_CLASSES_ROOT\CLSID\{F1B65282-8908-38B9-9B9B-C2474BAB4541}\ProgId]
 @="Mfconsulting.Vsprj2make.OptionsDlg"
@@ -99,13 +99,13 @@ REGEDIT4
 "Class"="Mfconsulting.Vsprj2make.Prj2MakeHelper"
 "Assembly"="vsprj2make, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f036f9099e9b631"
 "RuntimeVersion"="v1.1.4322"
-"CodeBase"="file:///D:/MonoWin32/vsAddIn/src/vsprj2makeAddin/bin/vsprj2make.DLL"
+"CodeBase"="file:///K:/cygwin/download/mono-svn/trunk/wintools/vsAddIn2003/src/vsprj2makeAddin/bin/vsprj2make.DLL"
 
 [HKEY_CLASSES_ROOT\CLSID\{A7BB3C68-3A2A-3246-B1A0-467187832B69}\InprocServer32\1.0.0.0]
 "Class"="Mfconsulting.Vsprj2make.Prj2MakeHelper"
 "Assembly"="vsprj2make, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f036f9099e9b631"
 "RuntimeVersion"="v1.1.4322"
-"CodeBase"="file:///D:/MonoWin32/vsAddIn/src/vsprj2makeAddin/bin/vsprj2make.DLL"
+"CodeBase"="file:///K:/cygwin/download/mono-svn/trunk/wintools/vsAddIn2003/src/vsprj2makeAddin/bin/vsprj2make.DLL"
 
 [HKEY_CLASSES_ROOT\CLSID\{A7BB3C68-3A2A-3246-B1A0-467187832B69}\ProgId]
 @="Mfconsulting.Vsprj2make.Prj2MakeHelper"
@@ -127,13 +127,13 @@ REGEDIT4
 "Class"="Mfconsulting.Vsprj2make.RegistryHelper"
 "Assembly"="vsprj2make, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f036f9099e9b631"
 "RuntimeVersion"="v1.1.4322"
-"CodeBase"="file:///D:/MonoWin32/vsAddIn/src/vsprj2makeAddin/bin/vsprj2make.DLL"
+"CodeBase"="file:///K:/cygwin/download/mono-svn/trunk/wintools/vsAddIn2003/src/vsprj2makeAddin/bin/vsprj2make.DLL"
 
 [HKEY_CLASSES_ROOT\CLSID\{3C910874-0FC4-3754-9B53-F99FC4B290D7}\InprocServer32\1.0.0.0]
 "Class"="Mfconsulting.Vsprj2make.RegistryHelper"
 "Assembly"="vsprj2make, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f036f9099e9b631"
 "RuntimeVersion"="v1.1.4322"
-"CodeBase"="file:///D:/MonoWin32/vsAddIn/src/vsprj2makeAddin/bin/vsprj2make.DLL"
+"CodeBase"="file:///K:/cygwin/download/mono-svn/trunk/wintools/vsAddIn2003/src/vsprj2makeAddin/bin/vsprj2make.DLL"
 
 [HKEY_CLASSES_ROOT\CLSID\{3C910874-0FC4-3754-9B53-F99FC4B290D7}\ProgId]
 @="Mfconsulting.Vsprj2make.RegistryHelper"
@@ -155,13 +155,13 @@ REGEDIT4
 "Class"="Mfconsulting.Vsprj2make.MonoLaunchHelper"
 "Assembly"="vsprj2make, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f036f9099e9b631"
 "RuntimeVersion"="v1.1.4322"
-"CodeBase"="file:///D:/MonoWin32/vsAddIn/src/vsprj2makeAddin/bin/vsprj2make.DLL"
+"CodeBase"="file:///K:/cygwin/download/mono-svn/trunk/wintools/vsAddIn2003/src/vsprj2makeAddin/bin/vsprj2make.DLL"
 
 [HKEY_CLASSES_ROOT\CLSID\{679CC08D-30C4-3970-8370-97594748A2DC}\InprocServer32\1.0.0.0]
 "Class"="Mfconsulting.Vsprj2make.MonoLaunchHelper"
 "Assembly"="vsprj2make, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f036f9099e9b631"
 "RuntimeVersion"="v1.1.4322"
-"CodeBase"="file:///D:/MonoWin32/vsAddIn/src/vsprj2makeAddin/bin/vsprj2make.DLL"
+"CodeBase"="file:///K:/cygwin/download/mono-svn/trunk/wintools/vsAddIn2003/src/vsprj2makeAddin/bin/vsprj2make.DLL"
 
 [HKEY_CLASSES_ROOT\CLSID\{679CC08D-30C4-3970-8370-97594748A2DC}\ProgId]
 @="Mfconsulting.Vsprj2make.MonoLaunchHelper"
