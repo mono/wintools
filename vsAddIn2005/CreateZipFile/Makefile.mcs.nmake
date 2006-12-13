@@ -1,0 +1,37 @@
+!if !defined (TARGET)
+TARGET=.\bin\Debug
+!else
+TARGET=.\bin\$(TARGET)
+!endif
+
+MCS=mcs
+!if !defined(RELEASE)
+MCSFLAGS=-debug --stacktrace
+!endif
+
+CREATEZIPFILE_EXE=$(TARGET)\CreateZipFromSln.exe
+CREATEZIPFILE_PDB=$(TARGET)\CreateZipFromSln.exe.mdb
+CREATEZIPFILE_SRC=AssemblyInfo.cs \
+	Drive.cs \
+	ZipCompressor.cs \
+	MainOpts.cs
+
+CREATEZIPFILE_RES=
+
+$(CREATEZIPFILE_EXE): $(CREATEZIPFILE_SRC) 
+	-md $(TARGET)
+	$(MCS) $(MCSFLAGS) -r:System.dll -r:System.Data.dll -r:System.Xml.dll -r:ICSharpCode.SharpZipLib.dll -r:Mono.GetOptions.dll -target:exe -out:$(CREATEZIPFILE_EXE) $(CREATEZIPFILE_RES) $(CREATEZIPFILE_SRC)
+
+
+# common targets
+
+all:	$(CREATEZIPFILE_EXE)
+
+clean:
+	-del "$(CREATEZIPFILE_EXE)" 2> nul
+	-del "$(CREATEZIPFILE_PDB)" 2> nul
+
+
+# project names as targets
+
+CreateZipFile: $(CREATEZIPFILE_EXE)

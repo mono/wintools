@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:element name="AppDesignerFolder" type="xs:string"/>
+	<xs:element name="AssemblyName" type="xs:string"/>
+	<xs:element name="AutoGen" type="xs:string"/>
+	<xs:element name="Compile">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SubType" minOccurs="0"/>
+				<xs:element ref="AutoGen" minOccurs="0"/>
+				<xs:element ref="DependentUpon" minOccurs="0"/>
+				<xs:element ref="DesignTimeSharedInput" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="Include" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Configuration">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="Condition" type="xs:string" use="required"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DebugSymbols" type="xs:boolean"/>
+	<xs:element name="DebugType">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="full"/>
+				<xs:enumeration value="pdbonly"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="DefineConstants" type="xs:string" />
+	<xs:element name="DependentUpon" type="xs:string" />
+	<xs:element name="DesignTimeSharedInput" type="xs:string"/>
+	<xs:element name="EmbeddedResource">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Generator" minOccurs="0"/>
+				<xs:element ref="LastGenOutput" minOccurs="0"/>
+				<xs:element ref="SubType"/>
+				<xs:element ref="DependentUpon" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="Include" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ErrorReport" type="xs:string"/>
+	<xs:element name="Generator">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="ResXFileCodeGenerator"/>
+				<xs:enumeration value="SettingsSingleFileGenerator"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Import">
+		<xs:complexType>
+			<xs:attribute name="Project" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ItemGroup">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element ref="Reference"/>
+				<xs:element ref="Compile"/>
+				<xs:element ref="EmbeddedResource"/>
+				<xs:element ref="None"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LastGenOutput">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="Resources.Designer.cs"/>
+				<xs:enumeration value="Settings.Designer.cs"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="None">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Generator"/>
+				<xs:element ref="LastGenOutput"/>
+			</xs:sequence>
+			<xs:attribute name="Include" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AllowUnsafeBlocks" type="xs:boolean" />
+	<xs:element name="Optimize" type="xs:boolean" />
+	<xs:element name="OutputPath">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="bin\Debug\"/>
+				<xs:enumeration value="bin\Release\"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="OutputType" type="xs:string"/>
+	<xs:element name="Platform">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="Condition" type="xs:string" use="required"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ProductVersion" type="xs:string"/>
+	<xs:element name="Project">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="PropertyGroup" maxOccurs="unbounded"/>
+				<xs:element ref="ItemGroup" maxOccurs="unbounded"/>
+				<xs:element ref="Import"/>
+			</xs:sequence>
+			<xs:attribute name="DefaultTargets" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ProjectGuid" type="xs:string"/>
+	<xs:element name="PropertyGroup">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Configuration" minOccurs="0"/>
+				<xs:element ref="Platform" minOccurs="0"/>
+				<xs:element ref="ProductVersion" minOccurs="0"/>
+				<xs:element ref="SchemaVersion" minOccurs="0"/>
+				<xs:element ref="ProjectGuid" minOccurs="0"/>
+				<xs:element ref="OutputType" minOccurs="0"/>
+				<xs:element ref="AppDesignerFolder" minOccurs="0"/>
+				<xs:element ref="RootNamespace" minOccurs="0"/>
+				<xs:element ref="AssemblyName" minOccurs="0"/>
+				<xs:element ref="DebugSymbols" minOccurs="0"/>
+				<xs:element ref="DebugType" minOccurs="0"/>
+				<xs:element ref="Optimize" minOccurs="0"/>
+				<xs:element ref="AllowUnsafeBlocks" minOccurs="0" />
+				<xs:element ref="OutputPath" minOccurs="0"/>
+				<xs:element ref="DefineConstants" minOccurs="0"/>
+				<xs:element ref="ErrorReport" minOccurs="0"/>
+				<xs:element ref="WarningLevel" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="Condition" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Reference">
+		<xs:complexType>
+			<xs:attribute name="Include"  type="xs:string" use="required" />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RootNamespace" type="xs:string"/>
+	<xs:element name="SchemaVersion" type="xs:decimal"/>
+	<xs:element name="SubType">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="Designer"/>
+				<xs:enumeration value="Form"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="WarningLevel" type="xs:byte"/>
+</xs:schema>

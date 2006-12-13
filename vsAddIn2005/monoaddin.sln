@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "monoaddin", "monoaddin\monoaddin.csproj", "{4441F814-D559-4C3F-9250-650709C79BB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateZipFile", "CreateZipFile\CreateZipFile.csproj", "{7546314B-68AE-4067-B3F2-3D703AACED64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prj2makesharp", "Prj2MakeWin32\prj2makesharp.csproj", "{C6089460-D3B0-4934-87BB-D96B897B72D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4441F814-D559-4C3F-9250-650709C79BB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4441F814-D559-4C3F-9250-650709C79BB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4441F814-D559-4C3F-9250-650709C79BB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4441F814-D559-4C3F-9250-650709C79BB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7546314B-68AE-4067-B3F2-3D703AACED64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7546314B-68AE-4067-B3F2-3D703AACED64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7546314B-68AE-4067-B3F2-3D703AACED64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7546314B-68AE-4067-B3F2-3D703AACED64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6089460-D3B0-4934-87BB-D96B897B72D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6089460-D3B0-4934-87BB-D96B897B72D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6089460-D3B0-4934-87BB-D96B897B72D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6089460-D3B0-4934-87BB-D96B897B72D7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

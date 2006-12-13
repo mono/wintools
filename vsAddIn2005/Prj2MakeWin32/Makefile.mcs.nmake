@@ -1,0 +1,45 @@
+!if !defined (TARGET)
+TARGET=.\bin\Debug
+!else
+TARGET=.\bin\$(TARGET)
+!endif
+
+MCS=mcs
+!if !defined(RELEASE)
+MCSFLAGS=-debug --stacktrace
+!endif
+
+PRJ2MAKESHARP_EXE=$(TARGET)\prj2makesharpWin32.exe
+PRJ2MAKESHARP_PDB=$(TARGET)\prj2makesharpWin32.exe.mdb
+PRJ2MAKESHARP_SRC=csproj_ver2003.cs \
+	CsprojInfo.cs \
+	MdPrjHelper.cs \
+	MsPrjHelper.cs \
+	pkgconfiginvoker.cs \
+	PrjHelper.cs \
+	PrjxInfo.cs \
+	sharp_d_cmbx.cs \
+	sharp_d_prjx.cs \
+	cui\AssemblyInfo.cs \
+	cui\Main.cs \
+	cui\MainMod.cs \
+	cui\MainOpts.cs
+PRJ2MAKESHARP_RES=
+
+$(PRJ2MAKESHARP_EXE): $(PRJ2MAKESHARP_SRC) 
+	-md $(TARGET)
+	$(MCS) $(MCSFLAGS) -r:System.Xml.dll -r:Mono.GetOptions.dll -r:System.dll -target:exe -out:$(PRJ2MAKESHARP_EXE) $(PRJ2MAKESHARP_RES) $(PRJ2MAKESHARP_SRC)
+
+
+# common targets
+
+all:	$(PRJ2MAKESHARP_EXE)
+
+clean:
+	-del "$(PRJ2MAKESHARP_EXE)" 2> nul
+	-del "$(PRJ2MAKESHARP_PDB)" 2> nul
+
+
+# project names as targets
+
+prj2makesharp: $(PRJ2MAKESHARP_EXE)
