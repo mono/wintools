@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 
 namespace Mfconsulting.Vsprj2make
 {
@@ -53,6 +54,57 @@ namespace Mfconsulting.Vsprj2make
 				return false;
 			}
 			return false;
+		}
+
+		/// <summary>
+		/// Returns the path to the Xsp.exe or Xsp2.exe based on the XspExeSelection
+		/// </summary>
+		public string GetXspExePath(int xspExeSelection)
+		{
+			RegistryHelper regHlpr = new RegistryHelper();
+			string strMonoBasePath;
+			string retVal = "";
+
+			if(xspExeSelection > 2 || xspExeSelection < 1)
+				throw new Exception("Invalid Xsp.exe selection. Value must be either 1 or 2");
+
+			strMonoBasePath = regHlpr.GetMonoBasePath();
+			
+			if(xspExeSelection == 1)
+			{
+				// Handle when it is Xsp.exe
+				retVal = Path.Combine(
+					strMonoBasePath,
+					@"lib\mono\1.0\xsp.exe"
+					);
+				if(File.Exists(retVal) == true)
+					return retVal;
+				retVal = Path.Combine(
+					strMonoBasePath,
+					@"lib\xsp\1.0\xsp.exe"
+					);
+				if(File.Exists(retVal) == true)
+					return retVal;
+			}
+
+			if(xspExeSelection == 2)
+			{
+				// Handle when it is Xsp2.exe
+				retVal = Path.Combine(
+					strMonoBasePath,
+					@"lib\mono\2.0\xsp2.exe"
+					);
+				if(File.Exists(retVal) == true)
+					return retVal;
+				retVal = Path.Combine(
+					strMonoBasePath,
+					@"lib\xsp\2.0\xsp2.exe"
+					);
+				if(File.Exists(retVal) == true)
+					return retVal;
+			}
+
+			return retVal;
 		}
 	}
 }

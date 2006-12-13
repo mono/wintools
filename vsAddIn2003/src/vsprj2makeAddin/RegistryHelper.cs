@@ -88,10 +88,10 @@ namespace Mfconsulting.Vsprj2make
 			set { m_Prj2MakeSoftwareKey.SetValue("XSPPort", value); }
 		}
 
-		public string XSPRootDirectory
+		public int XspExeSelection
 		{
-			get { return (string)m_Prj2MakeSoftwareKey.GetValue("XSPRootDirectory", @"C:\mono\Mono-1.0\share\doc\xsp\test"); }
-			set { m_Prj2MakeSoftwareKey.SetValue("XSPRootDirectory", value); }
+			get { return (int)m_Prj2MakeSoftwareKey.GetValue("XspExeSelection", 1); }
+			set { m_Prj2MakeSoftwareKey.SetValue("XspExeSelection", value); }
 		}
 
 		#endregion
@@ -102,7 +102,7 @@ namespace Mfconsulting.Vsprj2make
 			get
 			{
                 return (string)Prj2MakeSoftwareKey.GetValue("MonoLibPath",
-					"/usr/lib/mono/1.0,/usr/lib/mono/gtk-sharp");
+					"/usr/lib/mono/1.0,/usr/lib/mono/gtk-sharp-2.0");
 			}
 			set { Prj2MakeSoftwareKey.SetValue("MonoLibPath", value); }
 		}
@@ -168,7 +168,7 @@ namespace Mfconsulting.Vsprj2make
 				);
 			if(MonoRoot == null)			
 			{
-				throw new Exception("Mono may not be installed correctly");			
+				throw new Exception("A Mono installation could not be detected in your system.  Mono may not be installed.");			
 			}
 
 			return MonoRoot.GetSubKeyNames();
