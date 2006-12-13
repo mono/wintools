@@ -1,5 +1,5 @@
-README for vspr2make ver 0.99.0.2
-By Francisco T. Martinez <paco@mfcon.com> 5:56 PM 1/2/2006
+README for vspr2make ver 1.0.0.0
+By Francisco T. Martinez <paco@mfcon.com> Saturday, April 22, 2006
 -------------------------------------------------------------------------------
 
 General Description
@@ -14,9 +14,12 @@ Mono Combined Win32 Installer.
 
 New in this Release:
 
-The "Test In Mono" menu option is now implemented.  This will give users the
-ability to run the currently selected Startup project in a Visual Studio Solution
-using the Mono Runtime that is selected in accordance with MonoLaunch.
+The addition of a toolbar called MonoBarra. This toolbar contains a button with
+the caption "Test in Mono" and a combo box that list all register copies of
+the Mono Combined Installer found in the developer's Windows system.
+
+Starting with this version you users will be able to install and use the 
+VSPrj2make add-in without needing to first install MonoLaunch.
 
 
 Requirements:
@@ -24,8 +27,6 @@ Requirements:
 - Visual Studio .NET 2003
 
 - Mono Combined Win32 Installer (mono-1.1.10-gtksharp-2.4.0-win32-x.x.exe or higher)
-
-- Mono Runtime Selector Win32 Installer (MonoLaunch-1.0.0.2-1.exe or higher)
 
 
 Credits and Related Information

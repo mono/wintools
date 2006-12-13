@@ -1,3 +1,23 @@
+2006-12-13  Francisco "Paco" Martinez <paco@mfcon.com>
+
+	* vsprj2makeAddin/connect.cs: Added some error checking and exception
+	handling in the event that no copies of the Mono Combined Installer
+	are detected at runtime.  Change the labels and descriptions of the 
+	"Test in Mono" in favor of "Run on Mono" as suggested by Charlie Poole
+	from NUnit.  Added support to use either xsp.exe or xsp2.exe during
+	launches of Web Projects on Mono.
+	* vsprj2makeAddin/OptionsDlg.resx
+	* vsprj2makeAddin/OptionsDlg.cs: Made the entry box for adding the
+	LIBS variable value on generated makefiles editable.  Also added a
+	radio button selection to determine which xsp server to run.
+	* vsprj2makeAddin/MonoLaunchHelper.cs: Added functionality to support
+	the xsp server selection.
+	* vsprj2makeAddin/RegistryHelper.cs: Change some of the properties
+	that are used to store registry values to give more importance to what
+	xsp is being run rather than what directory xsp.exe (1.x) stores it.
+	Change some of the defaults that are used for creating makefiles to
+	favor gtk-sharp-2.0
+
 2006-04-19  Francisco "Paco" Martinez <paco@mfcon.com>
 
 	* Initial import into mono's svn repository
