@@ -32,15 +32,14 @@ namespace Mfconsulting.Vsprj2make
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.Button button3;
-		private System.Windows.Forms.Label label7;
-		private System.Windows.Forms.Button button4;
 		private System.Windows.Forms.TextBox m_edtDirectories;
 		private System.Windows.Forms.TextBox m_edtExtensions;
 		private System.Windows.Forms.NumericUpDown m_nupdwnCompressionLevel;
 		private System.Windows.Forms.TextBox m_edtLibPath;
 		private System.Windows.Forms.NumericUpDown m_nupdwnPort;
-		private System.Windows.Forms.TextBox m_edtRootDirXSP;
+		private System.Windows.Forms.GroupBox groupBox1;
+		private System.Windows.Forms.RadioButton radioButton1;
+		private System.Windows.Forms.RadioButton radioButton2;
 
 		public string MonoBasePath
 		{
@@ -87,7 +86,7 @@ namespace Mfconsulting.Vsprj2make
 				m_regH.MonoLibPath = m_edtLibPath.Text;
 				
 				m_regH.Port = (int)m_nupdwnPort.Value;
-				m_regH.XSPRootDirectory = m_edtRootDirXSP.Text;
+				m_regH.XspExeSelection = (radioButton1.Checked == true ? 1 : 2);
 			}
 			else
 			{
@@ -104,7 +103,10 @@ namespace Mfconsulting.Vsprj2make
 					m_edtLibPath.Text = m_regH.MonoLibPath;
 
 					m_nupdwnPort.Value = (decimal)m_regH.Port;
-					m_edtRootDirXSP.Text = m_regH.XSPRootDirectory;
+					if(m_regH.XspExeSelection == 1)
+						radioButton1.Checked = true;
+					else
+						radioButton2.Checked = true;
 				}
 				catch(Exception exc)
 				{
@@ -151,13 +153,12 @@ namespace Mfconsulting.Vsprj2make
 			this.m_nupdwnCompressionLevel = new System.Windows.Forms.NumericUpDown();
 			this.label2 = new System.Windows.Forms.Label();
 			this.m_tabPage4 = new System.Windows.Forms.TabPage();
-			this.button3 = new System.Windows.Forms.Button();
 			this.m_edtLibPath = new System.Windows.Forms.TextBox();
 			this.label6 = new System.Windows.Forms.Label();
 			this.m_tabPage2 = new System.Windows.Forms.TabPage();
-			this.button4 = new System.Windows.Forms.Button();
-			this.m_edtRootDirXSP = new System.Windows.Forms.TextBox();
-			this.label7 = new System.Windows.Forms.Label();
+			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.radioButton2 = new System.Windows.Forms.RadioButton();
+			this.radioButton1 = new System.Windows.Forms.RadioButton();
 			this.m_nupdwnPort = new System.Windows.Forms.NumericUpDown();
 			this.label5 = new System.Windows.Forms.Label();
 			this.m_panelButtons = new System.Windows.Forms.Panel();
@@ -170,6 +171,7 @@ namespace Mfconsulting.Vsprj2make
 			((System.ComponentModel.ISupportInitialize)(this.m_nupdwnCompressionLevel)).BeginInit();
 			this.m_tabPage4.SuspendLayout();
 			this.m_tabPage2.SuspendLayout();
+			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.m_nupdwnPort)).BeginInit();
 			this.m_panelButtons.SuspendLayout();
 			this.SuspendLayout();
@@ -316,7 +318,6 @@ namespace Mfconsulting.Vsprj2make
 			// 
 			// m_tabPage4
 			// 
-			this.m_tabPage4.Controls.Add(this.button3);
 			this.m_tabPage4.Controls.Add(this.m_edtLibPath);
 			this.m_tabPage4.Controls.Add(this.label6);
 			this.m_tabPage4.Location = new System.Drawing.Point(4, 22);
@@ -325,20 +326,10 @@ namespace Mfconsulting.Vsprj2make
 			this.m_tabPage4.TabIndex = 3;
 			this.m_tabPage4.Text = "Prj2Make#";
 			// 
-			// button3
-			// 
-			this.button3.Location = new System.Drawing.Point(408, 48);
-			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(24, 23);
-			this.button3.TabIndex = 6;
-			this.button3.Text = "...";
-			this.button3.Click += new System.EventHandler(this.button3_Click);
-			// 
 			// m_edtLibPath
 			// 
 			this.m_edtLibPath.Location = new System.Drawing.Point(16, 48);
 			this.m_edtLibPath.Name = "m_edtLibPath";
-			this.m_edtLibPath.ReadOnly = true;
 			this.m_edtLibPath.Size = new System.Drawing.Size(384, 20);
 			this.m_edtLibPath.TabIndex = 1;
 			this.m_edtLibPath.Text = "";
@@ -353,9 +344,7 @@ namespace Mfconsulting.Vsprj2make
 			// 
 			// m_tabPage2
 			// 
-			this.m_tabPage2.Controls.Add(this.button4);
-			this.m_tabPage2.Controls.Add(this.m_edtRootDirXSP);
-			this.m_tabPage2.Controls.Add(this.label7);
+			this.m_tabPage2.Controls.Add(this.groupBox1);
 			this.m_tabPage2.Controls.Add(this.m_nupdwnPort);
 			this.m_tabPage2.Controls.Add(this.label5);
 			this.m_tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -364,31 +353,30 @@ namespace Mfconsulting.Vsprj2make
 			this.m_tabPage2.TabIndex = 1;
 			this.m_tabPage2.Text = "XSP";
 			// 
-			// button4
+			// groupBox1
 			// 
-			this.button4.Location = new System.Drawing.Point(416, 72);
-			this.button4.Name = "button4";
-			this.button4.Size = new System.Drawing.Size(24, 23);
-			this.button4.TabIndex = 7;
-			this.button4.Text = "...";
-			this.button4.Click += new System.EventHandler(this.button4_Click);
+			this.groupBox1.Controls.Add(this.radioButton2);
+			this.groupBox1.Controls.Add(this.radioButton1);
+			this.groupBox1.Location = new System.Drawing.Point(16, 56);
+			this.groupBox1.Name = "groupBox1";
+			this.groupBox1.Size = new System.Drawing.Size(176, 96);
+			this.groupBox1.TabIndex = 2;
+			this.groupBox1.TabStop = false;
+			this.groupBox1.Text = "XSP selection";
 			// 
-			// m_edtRootDirXSP
+			// radioButton2
 			// 
-			this.m_edtRootDirXSP.Location = new System.Drawing.Point(16, 72);
-			this.m_edtRootDirXSP.Name = "m_edtRootDirXSP";
-			this.m_edtRootDirXSP.ReadOnly = true;
-			this.m_edtRootDirXSP.Size = new System.Drawing.Size(392, 20);
-			this.m_edtRootDirXSP.TabIndex = 3;
-			this.m_edtRootDirXSP.Text = "";
+			this.radioButton2.Location = new System.Drawing.Point(24, 56);
+			this.radioButton2.Name = "radioButton2";
+			this.radioButton2.TabIndex = 1;
+			this.radioButton2.Text = "XSP&2";
 			// 
-			// label7
+			// radioButton1
 			// 
-			this.label7.Location = new System.Drawing.Point(16, 48);
-			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(100, 16);
-			this.label7.TabIndex = 2;
-			this.label7.Text = "Root directory";
+			this.radioButton1.Location = new System.Drawing.Point(24, 24);
+			this.radioButton1.Name = "radioButton1";
+			this.radioButton1.TabIndex = 0;
+			this.radioButton1.Text = "&XSP";
 			// 
 			// m_nupdwnPort
 			// 
@@ -466,6 +454,7 @@ namespace Mfconsulting.Vsprj2make
 			((System.ComponentModel.ISupportInitialize)(this.m_nupdwnCompressionLevel)).EndInit();
 			this.m_tabPage4.ResumeLayout(false);
 			this.m_tabPage2.ResumeLayout(false);
+			this.groupBox1.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.m_nupdwnPort)).EndInit();
 			this.m_panelButtons.ResumeLayout(false);
 			this.ResumeLayout(false);
@@ -506,26 +495,5 @@ namespace Mfconsulting.Vsprj2make
 				);
 		}
 
-		private void button3_Click(object sender, System.EventArgs e)
-		{
-			MessageBox.Show(
-				this,
-				"Not implemented yet.",
-				"Prj2Make-Sharp",
-				MessageBoxButtons.OK,
-				MessageBoxIcon.Information
-				);
-		}
-
-		private void button4_Click(object sender, System.EventArgs e)
-		{
-			MessageBox.Show(
-				this,
-				"Not implemented yet.",
-				"Prj2Make-Sharp",
-				MessageBoxButtons.OK,
-				MessageBoxIcon.Information
-				);		
-		}
 	}
 }
