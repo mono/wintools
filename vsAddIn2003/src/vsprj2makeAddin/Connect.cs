@@ -72,7 +72,19 @@ namespace Mfconsulting.Vsprj2make
 		public void OnConnection(object application, Extensibility.ext_ConnectMode connectMode, object addInInst, ref System.Array custom)
 		{
 			Mfconsulting.Vsprj2make.RegistryHelper regHlpr = new RegistryHelper();
-			string []monoVersions = regHlpr.GetMonoVersions();
+			string []monoVersions = null;
+			
+			try
+			{
+				monoVersions = regHlpr.GetMonoVersions();
+			}
+			catch(Exception exc)
+			{
+				// Mono may not be installed
+				MessageBox.Show(exc.Message, "Prj2make Error",
+					MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return; // Pull the cord and discontinue loading the add-in
+			}
 
 			applicationObject = (_DTE)application;
 			addInInstance = (AddIn)addInInst;
@@ -103,7 +115,7 @@ namespace Mfconsulting.Vsprj2make
 			Command command2 = null;
 			// Import MonoDevelop Solutions
 			Command command3 = null;
-			// Test in Mono
+			// Run on Mono
 			Command command5 = null;
 			// vsprj2make Options
 			Command command6 = null;
@@ -231,19 +243,19 @@ namespace Mfconsulting.Vsprj2make
 				Trace.WriteLine(String.Format("Error during OnConnect of Add-in:\n {0}", exc.Message));
 			}
 
-			// Add the Test in Mono command -- command5
+			// Add the Ron on Mono command -- command5
 			command5 = CreateNamedCommand(
 				addInInstance,
 				commands,
-				"TestInMono",
-				"&Test in Mono", 
-				"Test solution under mono",
+				"RunOnMono",
+				"&Run on Mono", 
+				"Run solution on mono",
 				ref contextGUIDS
 				);
 			
 			if(command5 == null)
 			{
-				command5 = GetExistingNamedCommand(commands, "vsprj2make.Connect.TestInMono");
+				command5 = GetExistingNamedCommand(commands, "vsprj2make.Connect.RunOnMono");
 			}
 
 			try
@@ -349,7 +361,7 @@ namespace Mfconsulting.Vsprj2make
 			if(testInMonoCommandBarButton == null)
 			{
 
-				// Create the test In Mono Button
+				// Create the Ron on Mono Button
 				testInMonoCommandBarButton = (CommandBarButton)cmdBarMonoBarra.Controls.Add(
 					Microsoft.Office.Core.MsoControlType.msoControlButton,
 					System.Reflection.Missing.Value,
@@ -358,10 +370,10 @@ namespace Mfconsulting.Vsprj2make
 					false
 					);
 
-				testInMonoCommandBarButton.Caption = "Test in &Mono";
-				testInMonoCommandBarButton.DescriptionText = "Test solution with the mono runtime";
-				testInMonoCommandBarButton.TooltipText = "Test with mono";
-				testInMonoCommandBarButton.ShortcutText = "Test in &Mono";
+				testInMonoCommandBarButton.Caption = "Run on &Mono";
+				testInMonoCommandBarButton.DescriptionText = "Run solution with the mono runtime";
+				testInMonoCommandBarButton.TooltipText = "Run on mono";
+				testInMonoCommandBarButton.ShortcutText = "Run on &Mono";
 				testInMonoCommandBarButton.Style = MsoButtonStyle.msoButtonCaption;
 				testInMonoCommandBarButton.Click +=new _CommandBarButtonEvents_ClickEventHandler(testInMonoCommandBarButton_Click);
 			}
@@ -508,7 +520,7 @@ namespace Mfconsulting.Vsprj2make
 					status = (vsCommandStatus)vsCommandStatus.vsCommandStatusSupported|vsCommandStatus.vsCommandStatusEnabled;
 				}
 				
-				if(commandName == "vsprj2make.Connect.TestInMono")
+				if(commandName == "vsprj2make.Connect.RunOnMono")
 				{
 					status = (vsCommandStatus)vsCommandStatus.vsCommandStatusSupported|vsCommandStatus.vsCommandStatusEnabled;
 				}
@@ -590,7 +602,7 @@ namespace Mfconsulting.Vsprj2make
 					return;
 				}
 				
-				if(commandName == "vsprj2make.Connect.TestInMono")
+				if(commandName == "vsprj2make.Connect.RunOnMono")
 				{
 					// handled = true;
 					handled = TestInMono();
@@ -736,7 +748,7 @@ namespace Mfconsulting.Vsprj2make
 			return true;
 		}
 
-		// Test in Mono
+		// Run on Mono
 		public bool TestInMono()
 		{
 			// Registry Helper Obj
@@ -853,9 +865,7 @@ namespace Mfconsulting.Vsprj2make
 						monoLauncC.StartInfo.WorkingDirectory = aciveFileSharePath;
 						monoLauncC.StartInfo.Arguments = String.Format(
 							"{0} --root . --port {1} --applications /:.",
-							System.IO.Path.Combine(
-							regH.GetMonoBasePath(),
-							@"lib\xsp\1.0\xsp.exe"),
+							launchHlpr.GetXspExePath(regH.XspExeSelection),
 							portForXsp
 							);
 
