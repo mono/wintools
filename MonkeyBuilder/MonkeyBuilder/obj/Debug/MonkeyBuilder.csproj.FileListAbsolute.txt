@@ -1,6 +1,0 @@
-C:\svn\MonkeyBuilder\MonkeyBuilder\bin\Debug\MonkeyBuilder.exe.config
-C:\svn\MonkeyBuilder\MonkeyBuilder\obj\Debug\MonkeyBuilder.exe
-C:\svn\MonkeyBuilder\MonkeyBuilder\obj\Debug\MonkeyBuilder.pdb
-C:\svn\MonkeyBuilder\MonkeyBuilder\bin\Debug\MonkeyBuilder.exe
-C:\svn\MonkeyBuilder\MonkeyBuilder\bin\Debug\MonkeyBuilder.pdb
-C:\svn\MonkeyBuilder\MonkeyBuilder\obj\Debug\ResolveAssemblyReference.cache

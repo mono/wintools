@@ -1,6 +1,0 @@
-C:\Users\Administrator\Documents\Visual Studio 2005\Projects\MonkeyBuilder\MonkeyBuilder\bin\Debug\MonkeyBuilder.exe.config
-C:\Users\Administrator\Documents\Visual Studio 2005\Projects\MonkeyBuilder\MonkeyBuilder\bin\Debug\MonkeyBuilder.exe
-C:\Users\Administrator\Documents\Visual Studio 2005\Projects\MonkeyBuilder\MonkeyBuilder\bin\Debug\MonkeyBuilder.pdb
-C:\Users\Administrator\Documents\Visual Studio 2005\Projects\MonkeyBuilder\MonkeyBuilder\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\Administrator\Documents\Visual Studio 2005\Projects\MonkeyBuilder\MonkeyBuilder\obj\Debug\MonkeyBuilder.exe
-C:\Users\Administrator\Documents\Visual Studio 2005\Projects\MonkeyBuilder\MonkeyBuilder\obj\Debug\MonkeyBuilder.pdb
