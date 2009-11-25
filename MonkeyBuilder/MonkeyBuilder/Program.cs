@@ -62,7 +62,7 @@ namespace MonkeyBuilder
 
 			MonoCompiler.MonoCompiler mc = new MonkeyBuilder.MonoCompiler.MonoCompiler ();
 			
-			string config_file = Utilities.CombinePaths (Environment.CurrentDirectory, "win32.xml");
+			string config_file = Utilities.CombinePaths (Environment.CurrentDirectory, "mono", "msvc", "win32.xml");
 
 			StepResults compile_results = mc.Compile ("unknown", config_file);
 

@@ -43,6 +43,8 @@ namespace MonkeyBuilder.MonoCompiler
 
 				if (xe.GetAttribute ("enabled") == "false")
 					continue;
+				if (xe.GetAttribute ("installeronly") == "true")
+					continue;
 					
 				queue.Enqueue (xe);
 			}
