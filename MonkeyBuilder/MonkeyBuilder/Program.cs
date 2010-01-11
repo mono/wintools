@@ -45,7 +45,7 @@ namespace MonkeyBuilder
 			
 			string msbuild = @"C:\Windows\Microsoft.NET\Framework\v3.5\msbuild.exe";
 			string solution = Utilities.CombinePaths (Environment.CurrentDirectory, "mono", "msvc", "mono.sln");
-			string[] msbuild_args = new string[] { "/m", "\"" + solution + "\"", "/p:Configuration=Release_eglib" };
+			string[] msbuild_args = new string[] { "/m", "\"" + solution + "\"", "/p:Configuration=Release_eglib", "/p:Platform=Win32" };
 			
 			CommandLineResults results = CommandLineRunner.ExecuteCommand (msbuild, null, string.Join (" ", msbuild_args));
 			
