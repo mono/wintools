@@ -70,6 +70,8 @@ namespace MonkeyBuilder.MonoCompiler
 				args += " -noconfig";
 			if (config["NoStandardLib"] != null && config["NoStandardLib"].InnerText == "true")
 				args += " -nostdlib";
+			if (config["KeyFile"] != null)
+				args += string.Format (" -keyfile:{0}", Utilities.ReplaceArgs (config["KeyFile"].InnerText, Revision));
 
 			foreach (XmlElement reference in config.SelectNodes ("References/Reference")) {
 				if (!string.IsNullOrEmpty (reference.GetAttribute ("alias")))
